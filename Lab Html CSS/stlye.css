@@ -1,0 +1,78 @@
+/* tooltip */
+.tooltip {              /*ประกาศชื่อ class tooltip มาใน css ไฟล์    */
+      position: relative;  /* จัดรูปแบบ relative คือเลื่อน block ออกจากตำแแหน่งเดิมตามที่กำหนด   */
+      display: inline-block; /* จัด box ของ element แบบ block ให้สามารถอยู่บรรทัดเดียวกันได้    */
+      border-bottom: 1px dotted black;/* สร้างกรอบรูปแบบจุดเฉพาะด้านล่าง ขนาด 1px เป็นสีดำ */
+    }
+    
+    .tooltip .tooltiptext { /* ประกาศชื่อคลาส tootiptext ที่ซ้อนอยู่ในคลาส tooltip   */
+      visibility: hidden; /* ระบุว่ากล่องที่สร้างขึ้นจะมีการแสดงผลหรือไม่มี */
+      width: 120px; /*ระบุความกว้างของพื้นที่เนื้อหาช่องว่างภายใน */
+      background-color: black; /* ระบุสีฉากหลังของกล่อง  */
+      color: #fff; /*  สีตัวหนังสือ   */
+      text-align: center; /* ตำแหน่งแสดงตัวหนังสือในกล่อง  */
+      border-radius: 6px; /* ความโค้งมนของกรอบ     */
+      padding: 10px 10px; /* จัดการพื้นที่ส่วน padding ด้านบน ล่าง 10 px ด้าน ซ้าย ขวา 10 px */
+    
+      /* Position the tooltip */
+      position: absolute; /* จำแหน่งblock อยู่ซ้ายบนสุดของจอ ตามการกำหนด block */
+      z-index: 1; /* จัดให้ element นี้มีความสำคัญจะแสดงอยู่ด้านหน้าเนื่องจากเป็น ค่า 1 */
+    }
+    
+    .tooltip:hover .tooltiptext {  /* hover คือ คำสั่งในภาษา CSS ใช้ในกรณีที่ต้องการดักจับเหตุการณ์ ผู้ใช้งานวางเมาส์ไว้บน Elements ในตัวอย่างคือเมื่อวางบน element tooltips จะแสดงคำสั่งนั้น*/
+      visibility: visible;  /* ให้แสดงข้อความใน tooltiptext */
+    }
+
+    /* pagination */
+    .pagination {        /*   ประกาศชื่อ class pagination มาใน css ไฟล์    */
+      display: inline-block; /*  จัด box ของ element แบบ block ให้สามารถอยู่บรรทัดเดียวกันได้    */
+    }
+    
+    .pagination a { /*ประกาศชื่อ class pagination a มาใน css ไฟล์    */
+      color: black;    /* สีตัวหนังสือใน tag a มีสีดำ   */
+      float: left;       /* จัดกลุ่มให้ชิดซ้าย     */
+      padding: 8px 16px;   /* จัดการพื้นที่ส่วน padding ด้านบน ล่าง 8 px ด้าน ซ้าย ขวา 16 px */   
+      text-decoration: none; /*  ไม่ให้มีขีดข้างล่างข้อความ*/
+    }
+ 
+    /* Navigation bar */
+    .ul {         
+      list-style-type: none;    /*  ลบสัญลักษณ์แสดงหัวข้อย่อย แถบนำทางไม่จำเป็นต้องมีเครื่องหมายแสดงรายการ  */
+      margin: 0;   /* พื้นที่ margin 0    */
+      padding: 0;    /*  พื้นที่ padding 0 */
+      width: 170px;   /* ความกว้างบล็อค 170 px  */
+      background-color: #f1f1f1;   /* พิ้นหลังสีขาว     */
+    }
+    
+    .li a {
+      display: block;    /*การแสดงลิงก์เป็นองค์ประกอบบล็อกทำให้พื้นที่ลิงก์ทั้งหมดสามารถคลิกได้ (ไม่ใช่เฉพาะข้อความ) และช่วยให้เราสามารถระบุความกว้างได้ถ้าต้องการ*/
+      color: #000;   /* สีตัวหลังสือใน tag สีดำ   */
+      padding: 8px 8px;  /* พื้นที่ padding  ด้านบน ล่าง 8 px  พื้นที่ซ้ายขวา 8 px   */
+      text-decoration: underline; /*  ตกแต่งให้มีขีดเส้นใต้ */
+    }
+    
+    /* Change the link color on hover */
+    .li a:hover {   /* hover คือ คำสั่งในภาษา CSS ใช้ในกรณีที่ต้องการดักจับเหตุการณ์ ผู้ใช้งานวางเมาส์ไว้บน Elements จะแสดงคำสั่งนั้น*/
+      background-color: red; /* แสดงพื้นหลังเวลามีการวาง cursor mouse บนข้อความใน tag a */
+      color: white; /* แสดงสีพื้นตัวหนังสือใน tag a เมื่อมีการวาง cursor mouse ใน block */ 
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;  /* การจัดรูปแบบ block ให้เลื่อนออกจากตำแหน่งเดิม*/
+      display: inline-block;  /*  จัด box ของ element แบบ block ให้สามารถอยู่บรรทัดเดียวกันได้  span ที่เป็น inline และ div ที่เป็น block    */ 
+    }
+    
+    .dropdown-content {
+      display: none;   /* ต้องการซ่อน element ไม่ให้ผู้ใช้เห็น */
+      position: absolute; /* เลือน block ออกจากมุมซ้ายบนสุดของจอ ตามการดัน block ที่กำหนด   */
+      background-color: #f9f9f9; /* สีพื้นหลังของข้อความที่จะโชว์เมื่อ dropdown  */
+      min-width: 160px; /*  ความกว้างต่ำสุด 160px คือความกว้างของ block จะไม่ต่ำไปกว่านี้  */
+      box-shadow: 10px 8px 11px 11px rgba(0,0,0,0.2); /*  เงาของกล่องข้อความ */
+      padding: 12px 16px; /*  พื้นที่ padding ด้านบนล่าง 12px  ด้านซ้ายขวา 16 px */
+      z-index: 1;  /* ให้มีความสำคัญ ใส่เลข 1 แสดงผลด้านหน้าสุด  */
+    }
+    
+    .dropdown:hover .dropdown-content {    /* hover คือ คำสั่งในภาษา CSS ใช้ในกรณีที่ต้องการดักจับเหตุการณ์ ผู้ใช้งานวางเมาส์ไว้บน Elements จะแสดงคำสั่งใน ข้อความใน dropdown-content มาแสดง*/
+      display: block;  /*การแสดงลิงก์เป็นองค์ประกอบบล็อก */
+    }
