@@ -1,0 +1,24 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    }
+    
+    .container{
+    width: 1200px;
+    margin:  auto;
+    }
+.grid-area{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+.text-item{
+    text-align: center;
+}
+.grid-img img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

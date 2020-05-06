@@ -1,0 +1,15 @@
+.grid-container {
+    display: grid;
+    background-color: blueviolet;
+    padding: 1%;
+    grid-template-columns: 3fr 1fr 2fr;
+}
+.item{
+    background-color: fuchsia;
+    border: 1px solid bisque;
+}
+
+body{
+    margin:0;
+    padding: 0;
+}
